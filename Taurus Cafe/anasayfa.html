@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taurus Cafe</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/selima" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header {
+            background: linear-gradient(to right, rgb(119, 2, 2), rgb(197, 83, 2));
+            display: flex;
+            padding: 1px;
+        }
+
+        .gif img {
+            border-radius: 20px;
+            width: 300px;
+            height: 500px;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            border: 3px solid rgb(20, 1, 1);
+        }
+
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(253, 253, 253);
+            font-size: 7rem;
+            margin-left: 10rem;
+            margin-top: 10rem;
+            padding: 5px;
+            text-shadow: 0 10px rgba(32, 1, 1, 0.7);
+        }
+
+        #name {
+            text-align: center;
+            color: rgb(249, 247, 247);
+            font-family: 'Selima', sans-serif;
+        }
+
+        .button {
+            background-color: white;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: static;
+            margin: 11rem;
+            box-shadow: 0 0 30px 10px rgba(0, 116, 249, 0.6), 0 0 40px 15px rgba(255, 140, 0, 0.4), 0 0 60px 30px rgba(255, 69, 0, 0.2);
+            animation: flicker 2.0s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% {
+                box-shadow: 0 0 30px 10px rgba(91, 15, 1, 0.6), 0 0 40px 15px rgba(34, 168, 108, 0.4), 0 0 60px 30px rgba(4, 165, 93, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 40px 20px rgba(149, 22, 5, 0.7), 0 0 50px 20px rgba(10, 84, 140, 0.5), 0 0 70px 40px rgba(102, 5, 5, 0.3);
+            }
+
+            100% {
+                box-shadow: 0 0 30px 10px rgba(167, 101, 1, 0.6), 0 0 40px 15px rgba(3, 69, 94, 0.4), 0 0 60px 30px rgba(3, 21, 136, 0.2);
+            }
+        }
+
+        .coffee_button {
+            width: 150px;
+            height: 150px;
+        }
+
+        .headerPhotos {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .headerPhotos img {
+            width: 395px;
+            height: 260px;
+            border-style: groove;
+            border-color: rgb(24, 13, 1);
+            margin: 20px;
+        }
+
+        @keyframes moveLeftRight {
+            0% {
+                transform: translateX(0%);
+            }
+
+            50% {
+                transform: translateX(50%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        .grid {
+            display: flex;
+            justify-content: space-around;
+            overflow: hidden;
+        }
+
+        .grid .text {
+            animation: moveLeftRight 4s linear infinite;
+            margin: 30px;
+            opacity: 0.2;
+            font-size: 3rem;
+        }
+
+        /* Telefonlar için */
+        @media (max-width: 600px) {
+            .header {
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 3.5rem;
+                padding: 5px 5px 30px 20px;
+                margin: 0px 60px 10px 0px;
+            }
+
+            .gif img {
+                width: 60%;
+                height: auto;
+                margin: 40px 20px 40px 20px;
+            }
+
+            .button {
+                width: 70px;
+                height: 70px;
+                margin: 30px 50px 30px 0px;
+            }
+
+            .coffee_button {
+                width: 70px;
+                height: 70px;
+            }
+
+            .headerPhotos {
+                flex-direction: row;
+                align-items: center;
+                margin: 0px 40px 0px 40px;
+            }
+
+            .headerPhotos img {
+                width: 50%;
+                height: auto;
+                margin: 20px 10px 20px 10px;
+            }
+
+            .grid .text {
+                font-size: 1.8rem;
+                animation: none;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+
+        /* Tabletler için */
+        @media (min-width: 600px) and (max-width: 1024px){
+            h1 {
+                width: 0px;
+                height: 0px;
+                font-size: 5rem;
+                position: static;
+                margin: 80px 250px 0px 0px;
+            }
+
+            .gif img {
+                width: 50%;
+                height: auto;
+                position: static;
+                margin: 1rem 10rem 1rem 1rem;
+            }
+
+            .button {
+                width: 150px;
+                height: 140px;
+                margin: 150px 80px 100px 20px;
+                position: static;
+            }
+
+            .coffee_button {
+                width: 150px;
+                height: 140px;
+            }
+
+            .headerPhotos {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .headerPhotos img {
+                width: 40%;
+                height: auto;
+            }
+
+            .grid .text {
+                animation: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="anasayfa.html"
+            style="font-family: 'Selima', sans-serif; color: rgb(221, 17, 17); margin-left: 20px; margin-right: 20px; font-size: x-large;">Taurus</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="hakkimizda.html" style="color: aliceblue;">Hakkımızda <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html" style="color: aliceblue; margin-left: 10px;">Menü</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <div class="gif" id="gifContainer">
+            <img src="Taurus Coffee.gif" alt="Taurus Coffee">
+        </div>
+        <h1><span id="name">Taurus</span> Cafe</h1>
+
+        <div class="button">
+            <a href="menu.html">
+                <div>
+                    <img class="coffee_button" src="coffee_button.png" alt="Coffee button">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="headerPhotos">
+        <img id="photo1" src="mekan1.jpg" alt="Mekan fotoğrafı">
+        <img id="photo2" src="mekan3.jpg" alt="Kahve fotoğrafı">
+    </div>
+
+    <div class="grid">
+        <div class="text" style="color: rgb(221, 17, 17); ">Drinks</div>
+        <div class="text" style="color: rgb(221, 17, 17); ">Desserts</div>
+        <div class="text" style="color: rgb(221, 17, 17); ">Sandwiches</div>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; margin: 50px;">
+        <div class="card text-center mb-3" style="width: 20rem; border-color: black;">
+            <div class="card-body">
+                <h5 class="card-title" style="color: rgba(255, 111, 111, 0.904);">Günün en lezzet dolu anları burada !
+                </h5>
+                <p class="card-text" style="font-size: large; font-weight: 500;">Birbirinden güzel tatlılar, çeşit çeşit
+                    içecekler ve doyurucu enfes sandviçler için buraya uğra :)</p>
+                <a href="https://www.google.com/maps/place/Havuzba%C5%9F%C4%B1+Kafe+Restoran/@37.7427456,29.104775,19z/data=!4m6!3m5!1s0x14c73ec2d021b949:0xa9248f802ac060a4!8m2!3d37.7428402!4d29.1047929!16s%2Fg%2F11hb5xnnl8?entry=ttu"
+                    class="btn btn-light"
+                    style="font-size: 30px; font-weight: bolder; font-family: 'Selima', sans-serif; color: rgb(221, 17, 17); border-color: black;"
+                    target="_blank">Taurus</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 150px;">
+        <footer class="text-center text-lg-start bg-dark">
+            <div class="container d-flex justify-content-center py-5">
+                <button type="button" class="btn btn-primary btn-lg btn-floating mx-2"
+                    style="background-color: #06070e;">
+                    <i class="fa fa-instagram" style="font-size:24px"></i>
+                </button>
+                <button type="button" class="btn btn-primary btn-lg btn-floating mx-2"
+                    style="background-color: #06070e;">
+                    <i class="fa fa-twitter" style="font-size:24px"></i>
+                </button>
+            </div>
+            <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2024 Copyright:
+                <span style="font-size: 25px; font-family: 'Selima', sans-serif; color: rgb(221, 17, 17);">Taurus</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
